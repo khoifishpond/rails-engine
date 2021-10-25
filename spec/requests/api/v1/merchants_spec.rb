@@ -16,11 +16,11 @@ describe 'get /api/v1/merchants' do
     expect(merchants).to have_key(:data)
 
     expect(merchants[:data]).to be_an(Array)
-    expect(merchants[:data].count).to eq(5)
+    expect(merchants[:data].count).to eq(per_page)
 
     merchants[:data].each do |merchant|
       expect(merchant).to have_key(:id)
-      expect(merchant[:id]).to be_an(String)
+      expect(merchant[:id]).to be_a(String)
 
       expect(merchant).to have_key(:type)
       expect(merchant[:type]).to be_a(String)
