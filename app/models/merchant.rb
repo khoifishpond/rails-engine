@@ -1,4 +1,6 @@
 class Merchant < ApplicationRecord
+  has_many :items
+
   def self.paginate(page = 1, per_page = 20)
     page = 1 if page < 1
     per_page = 20 if per_page < 1
