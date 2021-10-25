@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe Merchant do
+describe Item do
   describe 'relationships' do
-    it {should have_many(:items) }
+    it { should belong_to(:merchant) }
   end
 end
