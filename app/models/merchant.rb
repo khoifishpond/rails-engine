@@ -1,9 +1,9 @@
 class Merchant < ApplicationRecord
-  has_many :items
+  include Filterable, Paginatable
 
-  def self.paginate(page = 1, per_page = 20)
-    page = 1 if page < 1
-    per_page = 20 if per_page < 1
-    limit(per_page).offset((page - 1) * per_page)
-  end
+  validates :name, presence: true
+  has_many :items, dependent: :destroy
+
+  scope :filter_by_name, -> (name) { where('lower(name) LIKE ?', "%#{name.downcase}%") }
+  scope :filter_by_id, -> (id) { where(id: id) }
 end
