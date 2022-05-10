@@ -1,24 +1,24 @@
-# README
+# Rails Engine
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project imagines a scenario where I a working for a company developing an E-Commerce Application. My team is working in a service-oriented architecture, meaning the front and back ends of this application are separate and communicate via APIs. My job is to expose the data that powers the site through an API that the front end will consume.
 
-Things you may want to cover:
+## Learning Goals
 
-* Ruby version
+* Expose an API
+* User serializers to format JSON responses
+* Test API exposure (with Postman)
+* Use SQL and ActiveRecord to gather data
 
-* System dependencies
+#### Ruby Version
 
-* Configuration
+```sh
+ruby --version
+ruby 2.7.2p137
+```
 
-* Database creation
+#### Rails Version
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```sh
+rails --version
+Rails 5.2.6
+```
